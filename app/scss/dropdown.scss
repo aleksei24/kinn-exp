@@ -1,0 +1,131 @@
+// .dropdown-section {
+//     min-height: 200px;
+// }
+
+.dropdown {
+    &__list {
+        display: flex;
+    }
+
+    &__list > li {
+        margin-right: 50px;
+    }
+
+    &__list > li:hover .sub__list {
+        display: block;
+        transition: all 0.5s ease;
+    }
+
+    &__list > li:hover .dropdown__arrow {
+        transform: rotateX(180deg);
+        right: 0px;
+        transition: all 0.5s ease;
+    }
+
+    &__link {
+        color: red;
+        padding: 0 10px;
+        font-size: 18px;
+    }
+
+    &__arrow {
+        position: absolute;
+        right: -10px;
+        top: 10px;
+    }
+}
+.dropdown li {
+    position: relative;
+}
+.arrow {
+    width: 0;
+    height: 0;
+    border-top: 7px solid red;
+    border-right: 7px solid transparent;
+    border-left: 7px solid transparent;
+}
+.sub {
+    &__list {
+        display: none;
+        position: relative;
+        left: 0;
+        top: 10px;
+        min-width: 100px;
+        padding-top: 0px;
+    }
+
+    &__list > li {
+        background-color: seagreen;
+    }
+
+    &__list > li:hover .sub-sub__list {
+        display: block;
+    }
+
+    &__list > li:hover .dropright__arrow {
+        transform: rotate(90deg);
+        transition: all 0.5s ease;
+    }
+
+    &__link {
+        color: yellow;
+        display: inline-block;
+        padding: 5px 10px;
+    }
+}
+.dropright {
+    &__arrow {
+        position: absolute;
+        right: 0;
+        top: 15px;
+        transform: rotate(-90deg);
+    }
+}
+.sub-sub {
+    &__list {
+        display: none;
+        position: relative;
+        top: 0;
+        left: 100%;
+        min-width: 100px;
+        padding-left: 5px;
+    }
+
+    &__list > li {
+        background-color: #cd32b6;
+    }
+
+    &__link {
+        color: wheat;
+        display: inline-block;
+        padding: 5px 10px;
+    }
+}
+
+@media (max-width: 600px) {
+    .dropdown {
+        max-width: 100%;
+        margin: 0 auto;
+    }
+    .dropdown__arrow {
+        right: 10px;
+    }
+    .dropdown__list {
+        display: block;
+    }
+    .dropdown__list > li {
+        margin: 0 0 10px 0;
+    }
+    .sub__list,
+    .sub-sub__list {
+        position: relative;
+        left: 0;
+        top: 0;
+    }
+    .sub__list > li:hover .dropright__arrow {
+        transform: rotateX(180deg);
+    }
+    .dropright__arrow {
+        transform: none;
+    }
+} ;

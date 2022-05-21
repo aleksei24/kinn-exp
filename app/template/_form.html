@@ -1,0 +1,87 @@
+<div class="form">
+    <div class="form__container container">
+        <form action="#!" id="form" class="form__body">
+            <h1 class="form__title">Sending data to e-mail</h1>
+            <div class="form__item">
+                <label for="form-name" class="form__label">Name*:</label>
+                <input type="text" name="name" id="form-name" class="form__input req" />
+            </div>
+            <div class="form__item">
+                <label for="form-email" class="form__label">E-mail*:</label>
+                <input type="text" name="email" id="form-email" class="form__input req _email" />
+            </div>
+            <div class="form__item">
+                <div class="form__label">Lefthand or Righthand</div>
+                <div class="options">
+                    <div class="options__item">
+                        <input
+                            type="radio"
+                            name="hand"
+                            id="form-righthand"
+                            checked
+                            class="options__input"
+                            value="right"
+                        />
+                        <label for="form-righthand" class="options__label">
+                            <span>Right hand</span>
+                        </label>
+                    </div>
+                    <div class="options__item">
+                        <input
+                            type="radio"
+                            name="hand"
+                            id="form-lefthand"
+                            class="options__input"
+                            value="left"
+                        />
+                        <label for="form-lefthand" class="options__label">
+                            <span>Left hand</span>
+                        </label>
+                    </div>
+                </div>
+            </div>
+            <div class="form__item">
+                <label for="form-message" class="form__label">Message</label>
+                <textarea name="message" id="form-message" class="form__input"></textarea>
+            </div>
+            <div class="form__item">
+                <div class="form__label">Age*:</div>
+                @@include('../template/_custom-select.html')
+            </div>
+            <div class="form__item">
+                <div class="form__label">Stick photo</div>
+                <div class="file">
+                    <div class="file__item">
+                        <label for="form-image"></label>
+                        <input
+                            accept=".jpg, .png, .gif"
+                            type="file"
+                            name="image"
+                            id="form-image"
+                            class="file__input"
+                            title="smt"
+                        />
+                        <div class="file__button">Choose</div>
+                    </div>
+                    <div class="file__preview"></div>
+                </div>
+            </div>
+            <div class="form__item">
+                <div class="checkbox">
+                    <input
+                        type="checkbox"
+                        name="agreement"
+                        id="formAgreement"
+                        class="checkbox__input req"
+                        checked
+                    />
+                    <label for="formAgreement" class="checkbox__label">
+                        Согласен с правилами обработки данных, прописанных в политике
+                        конфиденциальности.
+                    </label>
+                </div>
+            </div>
+            <button type="submit" class="form__button">Send</button>
+        </form>
+    </div>
+</div>

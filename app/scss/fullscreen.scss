@@ -1,0 +1,86 @@
+.fullscreen {
+  display: flex;
+  min-height: 100vh;
+  background-image: url(../img/fullscreen/full-01.jpeg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  @media (max-width: 1000px) {
+    object-fit: cover;
+    background-position: 70% 0;
+  }
+}
+.fullscreen__container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  flex: 1 1 auto;
+  // max-width: 1170px;
+  min-width: 100%;
+  padding: 5px 15%;
+  // background-color: rgba(0, 0, 0, 0.5);
+  @media (max-width: 62.5em) {
+    max-width: 95%;
+  }
+}
+.fullscreen__headline {
+  width: 100%;
+  max-width: calc(100vw - 85%);
+  color: rgb(226, 157, 29);
+  // @include response-font(70, 24);
+  font-size: 4.375rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  span {
+    color: rgb(39, 206, 39);
+  }
+  @media (max-width: $md2) {
+    @include adapt(font-size, 70, 24, 1)
+      // font-size: calc(rem(24) + (70 - 24) * (100vw - 320px) / (1520 - 320));
+      // min-font-size + (max-font-size - min-font-size) * (full-viewport - min-media-query) / (media-query start changes from - min-media-query)
+;
+  }
+  @media (max-width: $md3) {
+    max-width: calc(100vw - 50%);
+    // font-size: 3.5rem;
+  }
+  @media (max-width: $md5) {
+    max-width: calc(100vw - 10%);
+    // font-size: 2.5rem;
+  }
+}
+.fullscreen__text {
+  max-width: 20em;
+  max-height: 1.875em;
+  overflow: hidden;
+  color: #ffffff;
+  // @include response-font(14, 10);
+  font-size: 0.875rem;
+  font-weight: 400;
+  line-height: 30px;
+  letter-spacing: 1.4px;
+  margin: 30px 0 89px 0;
+  @media (max-width: 1000px) {
+    margin: 30px 0;
+  }
+}
+.fullscreen__btn {
+  align-self: start;
+}
+.btn_main {
+  width: 169px;
+  height: 46px;
+  color: $btnColour;
+  background-color: $btnBgColour;
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 30px;
+  text-transform: uppercase;
+  letter-spacing: 1.4px;
+  @media (max-width: $md3) {
+    width: calc(120px + (169 - 120) * (100vw - 320px) / (992 - 320));
+    height: 30px;
+    font-size: 12px;
+  }
+}

@@ -1,0 +1,57 @@
+.top {
+  background-color: $colourFont;
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  &__container {
+    height: 2.5em;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  &__text {
+    color: $bgColour;
+    // @include response-font(16, 8);
+  }
+
+  &__close {
+    position: absolute;
+    right: 0;
+    top: 25%;
+    padding: 0 5px;
+    height: 0.625em;
+    width: 0.625em;
+    @media (max-width: $md1) {
+      right: 3%;
+    }
+  }
+}
+
+.close {
+  &__btn {
+    &::before {
+      content: '';
+      display: inline-block;
+      background-color: #fff;
+      height: 12px;
+      width: 2px;
+      transform: rotate(-45deg);
+      position: absolute;
+      top: 6px;
+      left: 0;
+    }
+    &::after {
+      content: '';
+      display: inline-block;
+      background-color: #fff;
+      height: 12px;
+      width: 2px;
+      transform: rotate(45deg);
+      position: absolute;
+      top: 6px;
+      left: 0;
+    }
+  }
+}

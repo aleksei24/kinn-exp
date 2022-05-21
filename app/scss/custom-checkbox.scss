@@ -1,0 +1,95 @@
+@use 'sass:math';
+.check {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.check::before,
+.check::after {
+  position: relative;
+  box-sizing: border-box;
+}
+
+.check-hidden {
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  position: absolute;
+}
+
+.checkbox {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+}
+
+.checkbox__box {
+  line-height: 0;
+  font-size: 0;
+  position: absolute;
+  visibility: hidden;
+  opacity: 0;
+}
+
+.checkbox_border .checkbox__span {
+  border-color: $colourFont;
+}
+
+.checkbox__box:checked + .checkbox__span::after {
+  width: 20px;
+}
+
+.checkbox__box:checked + .checkbox__span::before {
+  width: 10px;
+}
+
+.checkbox__box:checked ~ .checkbox__text {
+  opacity: 1;
+}
+
+.checkbox__box:disabled + .checkbox__span::before,
+.checkbox__box:disabled + .checkbox__span::after {
+  opacity: 0;
+}
+
+.checkbox__span {
+  width: 18px;
+  height: 18px;
+  background-color: transparent;
+  border: 1px solid #e6d7bd;
+  display: block;
+  flex-shrink: 0;
+  margin-right: 12px;
+  position: relative;
+}
+
+.checkbox__span::before,
+.checkbox__span::after {
+  content: '';
+  width: 0;
+  height: 2px;
+  background-color: $colourFont;
+  display: block;
+  position: absolute;
+  border-radius: 5px;
+  transition: 0.3s;
+}
+
+.checkbox__span::before {
+  top: 57%;
+  left: 3px;
+  transform: translate(-50%, -50%) rotate(45deg);
+}
+
+.checkbox__span::after {
+  top: 35%;
+  right: 4px;
+  transform: translate(50%, -50%) rotate(-45deg);
+}
+.checkbox__text {
+  color: $colourFont;
+  // font-size: 12px;
+  // @include response-font(12, 10);
+  line-height: math.div(14, 12) * 100%;
+}

@@ -1,0 +1,89 @@
+.single-select {
+  position: relative;
+  max-width: 450px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 0 auto;
+
+  &__container {
+    padding: 0;
+  }
+
+  &__span {
+    color: $priceOld;
+    // font-size: 14px;
+    // @include response-font(14, 9);
+    padding: 5px 10px;
+    text-transform: capitalize;
+  }
+
+  &__top {
+    position: relative;
+    display: block;
+    width: 100%;
+    text-align: left;
+    background-color: #fff;
+    border: 2px solid black;
+    height: 35px;
+    padding: 5px 10px;
+    padding-right: 40px;
+    // @include response-font(16, 11);
+    font-weight: 700;
+    text-transform: uppercase;
+    @media (max-width: $md3) {
+      height: 28px;
+    }
+    &.active {
+      display: block;
+    }
+
+    &.single-select-active,
+    &:focus {
+      outline: none;
+    }
+    &::after {
+      content: '';
+      background-image: url(../img/icons/dropdown.png);
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: cover;
+      position: absolute;
+      right: 20px;
+      top: 60%;
+      width: 10px;
+      height: 6px;
+      transform: translateY(-50%);
+      margin-top: -3px;
+    }
+  }
+
+  &__list {
+    display: none;
+    list-style-type: none;
+    background-color: #fff;
+    overflow: hidden;
+    width: 100%;
+    position: absolute;
+    left: 0;
+    top: 100%;
+    z-index: 5;
+    border: 1px solid black;
+    margin-bottom: 20px;
+    &.dropdown__list_visible {
+      display: block;
+    }
+  }
+
+  &__item {
+    // @include response-font(15, 10);
+    text-transform: uppercase;
+    padding: 10px 20px;
+    border-bottom: 1px solid $colourFont;
+    cursor: pointer;
+  }
+}
+.single-select__input_hidden {
+  border: 1px solid black;
+  display: none;
+}

@@ -1,0 +1,19 @@
+.card-prev,
+.card-next {
+    display: none;
+    text-transform: capitalize;
+    font-family: $secondFont;
+    font-size: 16px;
+    color: $priceOld;
+    transition: color 0.3s;
+    &:hover {
+        color: $colourFont;
+        transition: color 0.3s;
+    }
+}
+.card-prev {
+    margin-left: auto;
+}
+.card-next {
+    margin-left: 20px;
+}

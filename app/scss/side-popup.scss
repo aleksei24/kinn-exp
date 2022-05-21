@@ -1,0 +1,66 @@
+@use 'sass:math';
+.side-popup {
+  position: absolute;
+  bottom: 3.125em;
+  left: -3.125em;
+  background-color: $popupBg;
+  padding: 0.625em;
+  display: flex;
+  justify-content: space-between;
+  max-width: 25em;
+  transform: translateX(-50vw);
+  transition: all 0.5s ease;
+  z-index: 5;
+  @media (max-width: $md2) {
+    left: 3.125em;
+    max-width: 18.75em;
+    bottom: 6.25em;
+  }
+  @media (max-width: $md3) {
+    left: 3.125em;
+    max-width: 12.5em;
+  }
+
+  &.active {
+    transform: translateX(0);
+  }
+
+  &.remove {
+    left: -50vw;
+  }
+
+  &__dscr {
+    font-size: 0.75rem;
+    line-height: math.div(15, 12) * 100%;
+  }
+
+  &__title {
+    font-family: $secondFont;
+    font-size: 1rem;
+    line-height: math.div(21, 16) * 100%;
+    @media (max-width: $md3) {
+      font-size: 0.875rem;
+    }
+  }
+
+  &__from {
+    font-size: 0.75rem;
+    line-height: math.div(15, 12) * 100%;
+    @media (max-width: $md3) {
+      font-size: 0.625rem;
+    }
+  }
+
+  &__close {
+    max-width: 1.875em;
+    max-height: 1.875em;
+    @media (max-width: $md2) {
+      display: none;
+      max-height: 0;
+      max-width: 0;
+    }
+  }
+  @media (max-width: $md4) {
+    display: none;
+  }
+}

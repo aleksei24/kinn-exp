@@ -1,0 +1,117 @@
+.team {
+    margin: 80px 0;
+    background-color: #fff;
+}
+.team__container {
+    max-width: 1109px;
+}
+.team__title {
+    margin-bottom: 30px;
+}
+.team__text {
+    opacity: 0.6;
+    color: #161418;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 30px;
+    max-width: 470px;
+    max-height: 38px;
+    overflow: hidden;
+}
+.team__trainers {
+    margin: 50px 0;
+    padding: 20px 5px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    @media (max-width: 1100px) {
+        margin: 40px 0;
+        padding: 10px 5px;
+    }
+    @media (max-width: 700px) {
+        justify-content: space-around;
+        margin: 10px 0;
+    }
+}
+.trainers__item {
+    flex: 0 0 337px;
+    @media (max-width: 1100px) {
+        flex: 0 0 300px;
+    }
+    @media (max-width: 960px) {
+        flex: 0 0 250px;
+    }
+    @media (max-width: 800px) {
+        flex: 0 0 200px;
+    }
+    @media (max-width: 650px) {
+        flex: 0 0 250px;
+        margin-bottom: 30px;
+    }
+    @media (max-width: 540px) {
+        flex: 0 0 400px;
+        margin: 0 auto;
+        margin-bottom: 30px;
+    }
+    @media (max-width: 400px) {
+        flex: 0 0 300px;
+    }
+    @media (max-width: 350px) {
+        flex: 0 0 250px;
+    }
+    @media (max-width: 300px) {
+        flex: 0 0 200px;
+    }
+}
+.trainers__card {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    @media (max-width: 540px) {
+        align-items: center;
+    }
+}
+.trainers__descript {
+    flex: 1 1 auto;
+    text-align: center;
+    padding: 40px 0 5px 0;
+    @media (max-width: 1100px) {
+        padding: 30px 0 5px 0;
+    }
+    @media (max-width: 700px) {
+        padding: 15px 0 5px 0;
+    }
+}
+.trainers__headline {
+    color: #161418;
+    @include response-font(26, 14);
+    font-weight: 700;
+    line-height: 30px;
+}
+.trainers__title {
+    color: #fa7c30;
+    @include response-font(14, 12);
+    font-weight: 700;
+    line-height: 30px;
+    text-transform: uppercase;
+    margin: 13px 0 30px 0;
+    @media (max-width: 1100px) {
+        margin: 10px 0 20px 0;
+    }
+    @media (max-width: 700px) {
+        margin: 10px 0;
+        line-height: 18px;
+    }
+}
+.trainers__text {
+    color: #161418;
+    @include response-font(16, 11);
+    font-weight: 400;
+    line-height: 30px;
+    @media (max-width: 1000px) {
+        line-height: 24px;
+    }
+    @media (max-width: 700px) {
+        line-height: 16px;
+    }
+}

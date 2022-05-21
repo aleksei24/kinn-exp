@@ -1,0 +1,124 @@
+@use 'sass:math';
+.goods {
+  max-width: 1420px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  position: relative;
+}
+
+.goods__card {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  flex: 0 0 23%;
+  height: auto;
+  padding: 10px;
+  // margin-bottom: 30px;
+  border: 5px solid yellowgreen;
+  @media (max-width: $md3) {
+    flex: 0 0 32%;
+  }
+  @media (max-width: $md4) {
+    flex: 0 0 48%;
+  }
+  @media (max-width: $md5) {
+    flex: 0 0 98%;
+  }
+}
+.goods__img {
+  max-width: 350px;
+  // min-width: 100%;
+  @media (max-width: $md2) {
+    max-width: 140px;
+  }
+}
+.goods__descript {
+  // flex: 1 1 auto;
+  text-align: center;
+  padding: 10px 0;
+}
+.goods__headline {
+  // @include response-font(24, 10);
+  font-weight: 700;
+  line-height: math.div(30, 24) * 100%;
+  // white-space: nowrap;
+}
+.goods__title {
+  color: $btnBgColour;
+  // @include response-font(14, 10);
+  font-weight: 700;
+  line-height: math.div(21, 14) * 100%;
+  text-transform: uppercase;
+  margin: 15px 0;
+}
+.goods__text {
+  color: $colourFont;
+  // @include response-font(16, 9);
+  line-height: math.div(18, 16) * 100%;
+  text-align: center;
+  // max-width: 330px;
+  min-height: 70px;
+  max-height: 140px;
+  overflow: hidden;
+}
+
+.goods__labels {
+  position: absolute;
+  top: 15px;
+  left: 15px;
+}
+.goods__label {
+  margin-bottom: 10px;
+  padding: 0 5px;
+  // @include response-font(15, 9);
+  text-transform: uppercase;
+  background-color: $labelBg;
+  border-radius: 15px;
+  color: $labelColour;
+  font-family: $secondFont;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1;
+}
+
+.price-goods {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  &__old {
+    flex: 1 1 100%;
+    text-align: right;
+    color: $priceOld;
+    // font-size: 12px;
+    // @include response-font(12, 9);
+    line-height: 150%;
+    text-decoration: line-through;
+  }
+
+  &__cart {
+    background-image: url(../img/icons/cart.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: left;
+    padding-left: 35px;
+    display: inline-block;
+    height: 30px;
+    width: 30px;
+    position: relative;
+    @media (max-width: $md3) {
+      height: 25px;
+      width: 25px;
+    }
+  }
+
+  &__current {
+    // font-size: 18px;
+    // @include response-font(18, 11);
+    font-family: $secondFont;
+    color: $priceCurrent;
+  }
+}

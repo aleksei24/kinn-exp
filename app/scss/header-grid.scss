@@ -1,0 +1,46 @@
+.header-grid {
+    grid-area: header-grid;
+    padding: 15px;
+    background-color: chartreuse;
+    display: grid;
+    align-items: center;
+    grid-template: 1fr/1fr minmax(auto, 300px) minmax(auto, 1100px) 1fr;
+    &__logo {
+        width: 70px;
+        height: 70px;
+        border-radius: 50%;
+        overflow: hidden;
+        grid-column: 2/3;
+    }
+
+    &__menu {
+        grid-column: 3/4;
+    }
+
+    &__list {
+        display: grid;
+        grid-auto-flow: column;
+        justify-items: end;
+    }
+
+    &__item {
+        margin-left: 30px;
+    }
+
+    &__link {
+        text-transform: uppercase;
+    }
+}
+
+@media (max-width: $md4) {
+    .header-grid__list {
+        display: none;
+    }
+    .header-grid__menu {
+        display: grid;
+        justify-items: end;
+    }
+    .header__burger {
+        display: block;
+    }
+}

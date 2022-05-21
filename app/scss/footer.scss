@@ -1,0 +1,153 @@
+@use 'sass:math';
+.footer {
+  &__container {
+    padding: 0.625em;
+    max-width: 79.375em;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    justify-content: space-between;
+  }
+  &__column {
+    flex: 0 0 24%;
+    @media (max-width: $md4) {
+      flex: 0 0 49%;
+    }
+    @media (max-width: $md5) {
+      flex: 0 0 100%;
+      margin-bottom: 10px;
+    }
+    &:last-child {
+      flex: 0 0 48%;
+      @media (max-width: $md4) {
+        flex: 0 0 100%;
+        margin-top: 0.9375em;
+      }
+      @media (max-width: $md5) {
+        margin-top: 0;
+      }
+    }
+  }
+
+  &__title {
+    text-transform: uppercase;
+    font-weight: 700;
+    // @include response-font(18, 12);
+    font-size: 1.125rem;
+    line-height: 1.33;
+  }
+
+  &__list {
+    margin-top: 0.125em;
+    @media (max-width: $md3) {
+      margin-top: 0.9375em;
+    }
+  }
+
+  &__item {
+    margin: 10px 0;
+    @media (max-width: $md3) {
+      margin: 7px 0;
+    }
+  }
+
+  &__link {
+    // @include response-font(15, 10);
+    font-size: 0.9375rem;
+  }
+
+  &__subscribe {
+    margin-top: 3.125em;
+    border-bottom: 1px solid $colourFont;
+    @media (max-width: $md3) {
+      margin-top: 2.1875em;
+    }
+    @media (max-width: $md4) {
+      margin-top: 1.5625em;
+    }
+  }
+  &__offer {
+    margin: 1.25em 0;
+    // @include response-font(16, 8);
+    font-size: 1rem;
+  }
+  &__subscribe input[type='email'] {
+    width: 70%;
+    height: 2.5em;
+    background-color: $bgColour;
+    padding-left: 0.75em;
+    color: $colourFont;
+    // @include response-font(15, 9);
+    font-size: 0.9375rem;
+    line-height: 1.4;
+    @media (max-width: $md3) {
+      width: 60%;
+    }
+  }
+  &__subscribe input[type='submit'] {
+    width: 29%;
+    height: 2.5em;
+    background-color: $transparentColour;
+    color: $colourFont;
+    font-family: $secondFont;
+    // @include response-font(18, 12);
+    font-size: 1.1125rem;
+    font-weight: 700;
+    text-transform: capitalize;
+    letter-spacing: 1.4px;
+  }
+}
+
+.footer__rights {
+  border-top: 1px solid $colourFont;
+  margin-top: 2.5em;
+  @media (max-width: $md4) {
+    margin-top: 1.25em;
+  }
+}
+
+.rights__container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  max-width: 79.375em;
+  padding: 1.25em 0.625em;
+  @media (max-width: $md4) {
+    padding: 0.4375em;
+  }
+}
+
+.rights {
+  &__links a {
+    margin: 0 1.25em;
+    font-family: $secondFont;
+    // @include response-font(15, 9);
+    font-size: 0.9375rem;
+    @media (max-width: $md4) {
+      margin: 0 0.625em;
+    }
+    @media (max-width: $md5) {
+      margin: 0 5px;
+    }
+  }
+}
+.social {
+  &__link {
+    margin: 0 0.9375em;
+    @media (max-width: $md3) {
+      margin: 0 0.625em;
+    }
+    @media (max-width: $md5) {
+      margin: 0 5px;
+    }
+    img {
+      max-width: 2em;
+      @media (max-width: $md3) {
+        max-width: 1.625em;
+      }
+      @media (max-width: $md5) {
+        max-width: 0.9375em;
+      }
+    }
+  }
+}

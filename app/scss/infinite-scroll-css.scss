@@ -1,0 +1,21 @@
+.scrolling-image-container {
+  overflow: hidden;
+  margin: 150px 0;
+}
+
+.scrolling-image {
+  height: 992px;
+  width: 5845px; // the image width multiplied by 5
+  background: url('https://images.unsplash.com/photo-1644665154099-57f1f473b0cb?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1169&q=80')
+    repeat-x;
+  animation: css-slide 10s linear infinite;
+}
+
+@keyframes css-slide {
+  0% {
+    transform: translate(0);
+  }
+  100% {
+    transform: translate(-1169px); /* the image width */
+  }
+}

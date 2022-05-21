@@ -1,0 +1,109 @@
+@use 'sass:math';
+.team {
+  margin: 80px 0;
+  background-color: $bgColour;
+}
+.team__container {
+  max-width: 1109px;
+}
+.team__title {
+  margin-bottom: 30px;
+}
+.team__text {
+  opacity: 0.6;
+  font-size: 14px;
+  line-height: math.div(30, 14) * 100%;
+  max-width: 470px;
+  max-height: 38px;
+  overflow: hidden;
+}
+.team__trainers {
+  margin: 50px 0;
+  padding: 20px 5px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  @media (max-width: 1100px) {
+    margin: 40px 0;
+    padding: 10px 5px;
+  }
+  @media (max-width: 700px) {
+    justify-content: space-around;
+    margin: 10px 0;
+  }
+}
+
+.trainers__card {
+  flex: 0 0 32%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  height: auto;
+  padding: 10px;
+  margin-bottom: 30px;
+  border: 5px solid yellowgreen;
+  @media (max-width: $md4) {
+    flex: 0 0 48.5%;
+  }
+  @media (max-width: $md5) {
+    flex: 0 0 95%;
+  }
+  @media (max-width: $md4) {
+    &:nth-child(5),
+    &:nth-child(6) {
+      display: none;
+    }
+  }
+  @media (max-width: $md5) {
+    &:nth-child(3),
+    &:nth-child(4) {
+      display: none;
+    }
+  }
+}
+.trainers__img {
+  max-width: 350px;
+}
+.trainers__descript {
+  // flex: 1 1 auto;
+  text-align: center;
+  padding: 5px 0;
+  span {
+    font-size: 21px;
+    color: $colourFont;
+    font-family: $secondFont;
+  }
+}
+.trainers__headline {
+  font-size: 24px;
+  // @include response-font(26, 14);
+  font-weight: 700;
+  line-height: math.div(30, 26) * 100%;
+  margin-bottom: 20px;
+  @media (max-width: $md4) {
+    margin-bottom: 10px;
+  }
+}
+.trainers__title {
+  color: $btnBgColour;
+  // @include response-font(14, 12);
+  font-weight: 700;
+  line-height: math.div(30, 14) * 100%;
+  text-transform: uppercase;
+  margin: 15px 0 30px 0;
+  @media (max-width: $md4) {
+    margin: 12px 0;
+  }
+}
+.trainers__text {
+  color: $colourFont;
+  // @include response-font(16, 11);
+  line-height: math.div(30, 16) * 100%;
+  text-align: center;
+  margin-bottom: 20px;
+  // max-width: 330px;
+  @media (max-width: $md4) {
+    margin-bottom: 10px;
+  }
+}

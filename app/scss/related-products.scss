@@ -1,0 +1,65 @@
+@use 'sass:math';
+.related-products {
+  &__title {
+    // font-size: 21px;
+    // @include response-font(21, 13);
+    font-family: $secondFont;
+    text-transform: uppercase;
+    letter-spacing: 4px;
+  }
+
+  &__list {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    margin-top: 20px;
+    padding: 5px 0;
+  }
+
+  &__item {
+    flex: 0 0 22%;
+    padding: 5px;
+    border: 2px solid yellowgreen;
+    border-radius: 5px;
+    min-height: 335px;
+    @media (max-width: $md5) {
+      flex: 0 0 48%;
+      margin-bottom: 10px;
+      min-height: 250px;
+    }
+  }
+}
+.item-related {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+  &__descript {
+    text-align: center;
+  }
+
+  &__headline {
+    color: $colourFont;
+    // @include response-font(16, 12);
+    margin-bottom: 10px;
+    text-transform: uppercase;
+  }
+
+  &__title {
+    color: $priceOld;
+    // font-size: 12px;
+    // @include response-font(12, 9);
+    margin-bottom: 15px;
+    text-transform: capitalize;
+  }
+
+  &__text {
+    // font-size: 14px;
+    // @include response-font(14, 10);
+    line-height: math.div(18, 14) * 100%;
+    min-height: 64px;
+    max-height: 70px;
+    overflow: auto;
+  }
+}

@@ -1,0 +1,121 @@
+.main-grid {
+    padding: 30px 15px;
+}
+
+.side-grid {
+    background-color: rgb(206, 67, 206);
+    padding: 30px 15px;
+    margin-bottom: 30px;
+}
+
+.side-grid__list li {
+    margin-bottom: 15px;
+}
+.side-grid__link {
+    color: white;
+    font-size: 21px;
+    text-transform: capitalize;
+}
+
+.content-grid__title {
+    font-size: 32px;
+    text-transform: capitalize;
+    margin-bottom: 50px;
+}
+.content-grid__gallery {
+    margin-bottom: 30px;
+}
+
+@media (min-width: 992px) {
+    .main-grid {
+        display: grid;
+        grid-area: main-grid;
+        grid-template: 1fr / 1fr minmax(auto, 300px) minmax(auto, 1100px) 1fr;
+    }
+    .side-grid {
+        grid-column: 2 / 3;
+        margin: 0;
+    }
+    .content-grid {
+        grid-column: 3 / 4;
+        padding-left: 30px;
+    }
+}
+
+.gallery-grid__title {
+    text-transform: uppercase;
+    margin-bottom: 20px;
+    font-size: 24px;
+}
+.gallery-grid__items {
+    display: grid;
+    gap: 10px;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    grid-auto-rows: minmax(250px, 250px);
+}
+.gallery-grid__item {
+    position: relative;
+    padding-bottom: 0;
+}
+.gallery-grid__item img {
+    // position: absolute;
+    // top: 0;
+    // left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+@media (min-width: 767px) {
+    .gallery-grid__item_big {
+        grid-column: span 2;
+        grid-row: span 2;
+    }
+}
+
+.products-grid__title {
+    text-transform: uppercase;
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+.products-grid__items {
+    display: grid;
+    column-gap: 30px;
+    row-gap: 50px;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    // grid-auto-rows: 1fr;
+}
+.products-grid__item {
+    display: grid;
+    grid-auto-flow: row;
+    grid-template: auto 1fr minmax(40px, auto) / 1fr;
+}
+.products-grid__img {
+    position: relative;
+    padding-bottom: 0;
+    margin-bottom: 20px;
+}
+.products-grid__img img {
+    // position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.products-grid__name {
+    font-size: 24px;
+    color: brown;
+    line-height: 30px;
+    margin-bottom: 20px;
+}
+.products-grid__button {
+    color: white;
+    background-color: red;
+    text-transform: uppercase;
+    line-height: 40px;
+    letter-spacing: 3px;
+    text-decoration: none;
+    justify-self: start;
+    padding: 0 20px;
+}

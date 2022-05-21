@@ -1,0 +1,16 @@
+.card-bottom {
+    margin: 20px 0;
+    &__container {
+        display: flex;
+        align-items: flex-start;
+        max-width: 1270px;
+        // height: 195px;
+        margin-bottom: 50px;
+        @media (max-width: $md5) {
+            flex-direction: column;
+        }
+        &:last-child {
+            margin-bottom: 0;
+        }
+    }
+}
