@@ -1,29 +1,26 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>Card</title>
-        <link rel="icon" type="image/png" href="./img/crown.webp" />
-        <link rel="stylesheet" href="css/style.min.css" />
-    </head>
-    <body>
-        <div class="wrapper">
-            @@include('template/_header.html')
-            <main class="main">
-                <section class="card">
-                    @@include('template/_crumbs.html')
-                    <div class="card-content">
-                        <div class="card-content__top">@@include('template/_card-top.html')</div>
-                        <div class="card-content__bottom">
-                            @@include('template/_card-bottom.html')
-                        </div>
-                    </div>
-                </section>
-            </main>
-            @@include('template/_footer.html')
-        </div>
-        <script src="libs/libs.js"></script>
-        <script src="js/main.min.js"></script>
-    </body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Card</title>
+    <link rel="icon" type="image/png" href="./img/crown.webp" />
+    <link rel="stylesheet" href="css/style.min.css" />
+  </head>
+  <body>
+    <div class="wrapper">
+      @@include('template/_header.html')
+      <main class="main">
+        <section class="card">
+          <div class="card-content">
+            <div class="card-content__top">@@include('template/_card-top.html')</div>
+            <div class="card-content__bottom">@@include('template/_card-bottom.html')</div>
+          </div>
+        </section>
+      </main>
+      @@include('template/_footer.html')
+    </div>
+    <script src="libs/libs.js"></script>
+    <script src="js/main.min.js"></script>
+  </body>
 </html>

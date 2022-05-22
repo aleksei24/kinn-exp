@@ -3,7 +3,7 @@ $secondFont: 'Jost';
 
 $maxWidth: em(1440);
 $minWidth: em(320);
-$contWidth: em(1357);
+$contWidth: em(1440);
 $md1: $contWidth;
 $md2: em(992);
 $md3: em(768);
@@ -13,8 +13,8 @@ $md5: em(400);
 $bgColour: #ffffff;
 $popupBg: rgb(202, 202, 202);
 $colourFont: #151515;
-$btnColour: rgb(211, 211, 211);
-$btnBgColour: rgb(255, 123, 0);
+$btnColour: #fff;
+$btnBgColour: #56593d;
 $headerFixed: rgba(216, 216, 216, 0.7);
 $transparentColour: transparent;
 $asideBorder: rgb(104, 104, 104);
@@ -55,7 +55,7 @@ body {
   margin: 0;
   list-style-type: none;
   text-decoration: none;
-  // outline: 1px solid red;
+  outline: 1px solid red;
 }
 a {
   text-decoration: none;
@@ -90,7 +90,6 @@ button {
   display: flex;
   justify-content: center;
   align-items: center;
-  align-self: center;
   color: $btnColour;
   background-color: $btnBgColour;
 }
@@ -114,7 +113,7 @@ button {
   width: 100%;
   height: auto;
   margin: 0 auto;
-  padding: 0 15px;
+  padding: 0 em(10);
 }
 
 .ibg {

@@ -1,7 +1,7 @@
 .header {
-  position: absolute;
-  left: 0;
-  top: 0;
+  // position: absolute;
+  // left: 0;
+  // top: 0;
   width: 100%;
   z-index: 10;
   transition: all 0.8s ease;
@@ -23,6 +23,7 @@
     align-items: center;
     gap: em(20);
     max-width: em(140);
+    margin-right: em(15);
     @media (max-width: $md5) {
       display: none;
     }
@@ -68,6 +69,9 @@
   &__item {
     width: 1.25rem;
     margin-right: 1.25rem;
+  }
+  &__link {
+    background-color: transparent;
   }
   &_num {
     position: absolute;
