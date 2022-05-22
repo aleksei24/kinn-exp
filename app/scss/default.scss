@@ -10,9 +10,6 @@ $md3: em(768);
 $md4: em(480);
 $md5: em(400);
 
-$indexSliderWidth: 100em;
-$catalogSliderWidth: 112.5em;
-
 $bgColour: #ffffff;
 $popupBg: rgb(202, 202, 202);
 $colourFont: #151515;
@@ -20,8 +17,6 @@ $btnColour: rgb(211, 211, 211);
 $btnBgColour: rgb(255, 123, 0);
 $headerFixed: rgba(216, 216, 216, 0.7);
 $transparentColour: transparent;
-$crumbsColour: rgb(109, 102, 86);
-$crumbActiveColour: rgb(128, 83, 0);
 $asideBorder: rgb(104, 104, 104);
 $priceOld: rgba(143, 143, 143, 0.7);
 $priceCurrent: rgb(196, 55, 0);
@@ -60,7 +55,7 @@ body {
   margin: 0;
   list-style-type: none;
   text-decoration: none;
-  outline: 1px solid red;
+  // outline: 1px solid red;
 }
 a {
   text-decoration: none;

@@ -9,14 +9,8 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
-    @include adapt(padding-top, 20, 15, 1);
-    @include adapt(padding-bottom, 20, 15, 1);
-    // padding-top: 20px;
-    // padding-bottom: 20px;
-    // @media (max-width: $md2) {
-    //   padding-top: 15px;
-    //   padding-bottom: 15px;
-    // }
+    @include adapt(padding-top, 54, 20, 1);
+    @include adapt(padding-bottom, 8, 5, 1);
   }
 
   &__logo {
@@ -27,7 +21,8 @@
   &__shop-menu {
     display: flex;
     align-items: center;
-    max-width: 18.75rem;
+    gap: em(20);
+    max-width: em(140);
     @media (max-width: $md5) {
       display: none;
     }
@@ -48,20 +43,21 @@
 }
 
 .nav {
-  @media (max-width: $md4) {
+  max-width: em(564);
+  @media (max-width: $md3) {
     display: none;
   }
   &__list {
     display: flex;
-    column-gap: 1.25rem;
+    column-gap: em(35);
   }
 
   &__link {
     position: relative;
-    @media (min-width: $md2) {
-      font-size: 1.25rem;
-    }
-    font-size: 1rem;
+    text-transform: uppercase;
+    font-size: em(16);
+    line-height: em(25);
+    color: #56593d;
     &:hover {
       border-bottom: 3px solid $colourFont;
     }
@@ -72,55 +68,13 @@
   &__item {
     width: 1.25rem;
     margin-right: 1.25rem;
-    &_search {
-      max-width: 6.25rem;
-      @media (min-width: $md3) {
-        max-width: 12.5rem;
-      }
-    }
   }
-  &__search {
-    display: flex;
-    align-items: center;
-  }
-}
-.search {
-  &__btn {
-    background-image: url(../img/icons/search.png);
-    width: 1.125em;
-    height: 1.25em;
-    padding-right: 1.25em;
-    cursor: pointer;
-  }
-  &__btn:hover {
-    outline: none;
-    max-width: 12.5em;
-    width: 100%;
-    border-bottom: 1px solid black;
-    background-size: 0%;
-  }
-}
-.cart {
-  display: inline-flex;
-  align-items: center;
-  background-image: url(../img/icons/cart.png);
-  width: 1.875em;
-  height: 1.875em;
-
-  &__num {
+  &_num {
     position: absolute;
-    right: -1.25em;
-    top: 0;
-  }
-}
-
-.num {
-  background-color: $btnBgColour;
-  color: $colourFont;
-  padding: 0 7px;
-  border-radius: 1.25em;
-  &_transp {
-    background-color: $transparentColour;
-    border: 1px solid $colourFont;
+    bottom: em(-5);
+    right: em(-5);
+    padding: em(5);
+    background-color: #fff;
+    border-radius: 50%;
   }
 }

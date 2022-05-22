@@ -53,12 +53,17 @@
   content: '\e900';
   font-size: 2rem;
   color: black;
+  position: relative;
+  background-color: transparent;
 }
 ._icon-arrow:before {
   content: '\e901';
 }
 ._icon-down:before {
   content: '\e902';
+  font-size: 0.625rem;
+  color: black;
+  margin-left: 0.5em;
 }
 ._icon-fb:before {
   content: '\e903';

@@ -14,7 +14,6 @@
 @@include('./chunks/_main_popup.js')
 @@include('./chunks/_columns_number.js')
 @@include('./chunks/_single_custom_select.js')
-@@include('./chunks/_swiper_slider.js')
 @@include('./chunks/_colour_select.js')
 @@include('./chunks/_size_select.js')
 @@include('./chunks/_spoilers.js')

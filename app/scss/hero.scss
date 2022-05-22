@@ -1,49 +1,21 @@
 @use 'sass:math';
 .hero {
-  height: 100vh;
-  min-height: 37.5em;
+  height: em(825);
   position: relative;
   // margin-top: 200px;
-  &::before {
-    content: '';
-    position: absolute;
-    left: 0;
-    top: 0;
-    background-color: #000000;
-  }
+  background-image: url(../img/hero/full.jpg);
+  background-position: 0 em(125);
+  background-size: contain;
 
   &__container {
-    margin: 0 auto;
-    padding: 10px;
-    width: $indexSliderWidth;
     position: relative;
-    height: 100vh;
-    // border: 1px solid $colourFont;
-    @media (max-width: $indexSliderWidth) {
-      width: 100%;
-    }
   }
 
   &__content {
-    position: relative;
     display: flex;
-    flex-wrap: wrap;
     flex-direction: column;
-    align-items: flex-start;
-    justify-content: center;
-    // width: 1300px;
-    height: 100vh;
-    @media (max-width: $md3) {
-      justify-content: flex-start;
-      padding-top: 20%;
-    }
-    @media (max-width: $md4) {
-      align-items: center;
-      padding-top: 25%;
-    }
-    @media (max-width: $md5) {
-      padding-top: 50%;
-    }
+    align-items: flex-end;
+    justify-content: end;
   }
 
   &__title {
