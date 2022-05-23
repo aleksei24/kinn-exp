@@ -88,7 +88,6 @@
     // font-size: 12px;
     font-size: rem(12);
     text-transform: uppercase;
-    color: $priceOld;
     margin-bottom: 20px;
     @media (max-width: $md3) {
       margin-bottom: 10px;
@@ -195,7 +194,6 @@
     }
     span {
       font-size: rem(19);
-      color: $priceOld;
       text-transform: uppercase;
     }
   }
@@ -203,19 +201,16 @@
 .card-price {
   font-family: $secondFont;
   &__current {
-    color: $priceCurrent;
     font-size: rem(20);
   }
 
   &__old {
-    color: $priceOld;
     font-size: rem(15);
   }
 }
 
 .colour-select {
   &__done {
-    color: $priceOld;
     text-transform: capitalize;
     font-size: rem(16);
     span {
@@ -275,7 +270,7 @@
       transform: translate(-50%, -50%);
       width: 30px;
       height: 30px;
-      border: 1px solid $priceOld;
+      border: 1px solid gray;
       border-radius: 100%;
       background-color: $transparentColour;
       @media (max-width: $md4) {
@@ -294,7 +289,6 @@
 
 .size-select {
   &__done {
-    color: $priceOld;
     text-transform: capitalize;
     font-size: rem(16);
     span {
@@ -316,7 +310,7 @@
   &__item {
     margin-right: 20px;
     margin-bottom: 10px;
-    border: 1px solid $priceOld;
+    border: 1px solid grey;
     @media (max-width: $md3) {
       margin-right: 15px;
       font-size: rem(16);

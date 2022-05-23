@@ -14,7 +14,7 @@
   min-width: em(260);
   height: max-content;
   padding: 25px 5px 5px;
-  border: 1px solid $asideBorder;
+  border: 1px solid grey;
   @media (max-width: $md3) {
     min-width: em(140);
   }

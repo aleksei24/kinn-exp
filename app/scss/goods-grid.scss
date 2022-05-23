@@ -74,9 +74,9 @@
   padding: 0 5px;
   // @include response-font(15, 9);
   text-transform: uppercase;
-  background-color: $labelBg;
+  background-color: greenyellow;
   border-radius: 15px;
-  color: $labelColour;
+  color: black;
   font-family: $secondFont;
   display: flex;
   align-items: center;
@@ -92,7 +92,7 @@
   &__old {
     flex: 1 1 100%;
     text-align: right;
-    color: $priceOld;
+    color: grey;
     // font-size: 12px;
     // @include response-font(12, 9);
     line-height: 150%;
@@ -119,6 +119,6 @@
     // font-size: 18px;
     // @include response-font(18, 11);
     font-family: $secondFont;
-    color: $priceCurrent;
+    color: black;
   }
 }
