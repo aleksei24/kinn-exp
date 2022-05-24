@@ -14,24 +14,25 @@
     flex: 1 1 25%;
   }
   &__logo {
+    margin: 0 em(10);
     animation-name: pulselogo;
     animation-duration: 4s;
     animation-iteration-count: infinite;
     @media (max-width: $md4) {
-      flex: 1 1 auto;
+      flex: 1 1 em(100);
     }
   }
 }
 .menu-top-header {
   display: block;
-  @media (max-width: $md2) {
+  @media (max-width: $md3) {
     display: none;
   }
   &__list {
     display: flex;
-    @include adapt(column-gap, 60, 20, 1);
+    @include adapt(column-gap, 50, 20, 1);
     row-gap: em(5);
-    @media (max-width: $md2) {
+    @media (max-width: $md3) {
       flex-direction: column;
       row-gap: em(32);
     }
@@ -42,6 +43,7 @@
     line-height: rem(25);
     text-transform: uppercase;
     color: #56593d;
+    white-space: nowrap;
     &_catalog {
       display: flex;
       justify-content: space-between;
@@ -76,7 +78,7 @@
   padding-left: em(16);
   // @include adapt(padding-left, 150, 20, 1);
   flex: 0 1 em(240);
-  @media (max-width: $md2) {
+  @media (max-width: $md3) {
     flex: 1 1 auto;
   }
   @media (max-width: $md4) {
@@ -102,7 +104,8 @@
   &__input {
     background-color: transparent;
     border-radius: 3px;
-    height: em(40);
+    // height: em(40);
+    @include adapt(height, 32, 21, 1);
     color: var(--main-colour);
     padding: 0 em(10) 0 em(40);
     width: 100%;
@@ -158,12 +161,12 @@
 /* ================================== */
 @keyframes pulselogo {
   from {
-    transform: scale(75%);
+    transform: scale(85%);
   }
   50% {
     transform: scale(100%);
   }
   to {
-    transform: scale(75%);
+    transform: scale(85%);
   }
 }
