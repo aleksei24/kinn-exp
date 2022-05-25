@@ -1,0 +1,35 @@
+.quote {
+  @include adapt(margin-top, 94, 30, 1);
+  @include adapt(margin-bottom, 94, 30, 1);
+  margin-left: 0;
+  margin-right: 0;
+  &__container {
+    padding-top: 0;
+    padding-bottom: 0;
+    @include adapt(padding-left, 83, 10, 1);
+    @include adapt(padding-right, 83, 10, 1);
+  }
+
+  &__headline {
+    color: #56593d;
+    @include adapt(font-size, 57, 21, 1);
+    @include adapt(line-height, 81, 26, 1);
+    text-align: center;
+  }
+
+  &__links {
+    margin: em(26) auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    max-width: em(300);
+  }
+
+  &__shop,
+  &__stories {
+    font-size: rem(16);
+    line-height: rem(25);
+    text-transform: capitalize;
+    margin-right: em(4);
+  }
+}

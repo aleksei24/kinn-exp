@@ -8,7 +8,6 @@ let path = {
     html: projectFolder + '/',
     css: projectFolder + '/css/',
     js: projectFolder + '/js/',
-    libs: projectFolder + '/libs/',
     img: projectFolder + '/img/',
     fonts: projectFolder + '/fonts/',
     json: projectFolder + '/json/',
