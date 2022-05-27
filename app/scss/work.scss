@@ -1,0 +1,26 @@
+.maintenance {
+  display: flex;
+  min-height: 100vh;
+  background-color: #fff;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+
+  &__container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-width: 100%;
+    padding: 5px 15%;
+  }
+
+  &__headline {
+    font-size: rem(50);
+    margin-bottom: em(40);
+  }
+
+  &__message {
+    font-size: rem(42);
+  }
+}
