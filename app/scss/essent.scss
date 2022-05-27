@@ -1,0 +1,44 @@
+@use 'sass:math';
+.essent {
+  position: relative;
+  margin: em(25) 0;
+  background-image: url(../img/essentials/essent.jpg);
+  background-position: center;
+  background-size: cover;
+  height: em(730);
+  @media (max-width: $md3) {
+    background-position: em(-150) 0;
+  }
+
+  &__img {
+    position: relative;
+  }
+
+  &__content {
+    position: absolute;
+    top: em(62);
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    padding: 0 em(10);
+    text-align: center;
+    max-width: em(1050);
+  }
+
+  &__title {
+    font-size: rem(17);
+    line-height: rem(21);
+    margin-bottom: em(11);
+    color: #56593d;
+    text-transform: uppercase;
+  }
+
+  &__dscr {
+    @include adapt(font-size, 50, 24, 1);
+    @include adapt(line-height, 60, 32, 1);
+    min-height: em(40);
+    overflow: hidden;
+    max-height: em(115);
+    color: #56593d;
+  }
+}
