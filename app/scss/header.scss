@@ -1,3 +1,15 @@
+.header {
+  &_fixed {
+    position: fixed;
+    top: -40px;
+    left: 0;
+    right: 0;
+    width: 100%;
+    z-index: 10;
+    background-color: $headerFixed;
+  }
+}
+
 .header__top {
   background-color: #fff;
   // color: rgb(14, 34, 51);
