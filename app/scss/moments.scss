@@ -1,0 +1,31 @@
+.moments {
+  @include adapt(padding-top, 40, 15, 1);
+  @include adapt(padding-bottom, 64, 20, 1);
+  padding-left: 0;
+  padding-right: 0;
+
+  &__title {
+    color: #56593d;
+    font-size: rem(25);
+    line-height: rem(32);
+    text-align: center;
+    margin-top: em(64);
+  }
+
+  &__pictures {
+    margin-top: em(31);
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(em(250), 1fr));
+    gap: em(8);
+    @include adapt(padding-left, 24, 10, 1);
+    @include adapt(padding-right, 24, 10, 1);
+  }
+}
+
+.pictures-moments {
+  &__item {
+    img {
+      width: fill-available;
+    }
+  }
+}
