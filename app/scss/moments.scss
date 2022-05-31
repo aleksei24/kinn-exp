@@ -9,7 +9,7 @@
     font-size: rem(25);
     line-height: rem(32);
     text-align: center;
-    margin-top: em(64);
+    @include adapt(margin-top, 64, 20, 1);
   }
 
   &__pictures {

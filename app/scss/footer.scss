@@ -9,7 +9,7 @@
     padding: 0.625em;
     max-width: em(1392);
     display: grid;
-    @include adapt(gap, 32, 16, 1);
+    gap: em(32);
     grid-template-columns: repeat(auto-fill, minmax(em(250), 1fr));
   }
 

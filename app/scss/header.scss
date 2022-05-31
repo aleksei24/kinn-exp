@@ -1,3 +1,15 @@
+.header {
+  &_fixed {
+    position: fixed;
+    top: -40px;
+    left: 0;
+    right: 0;
+    width: 100%;
+    z-index: 10;
+    background-color: $headerFixed;
+  }
+}
+
 .header__top {
   background-color: #fff;
   // color: rgb(14, 34, 51);
@@ -7,11 +19,12 @@
   &__container {
     display: flex;
     align-items: center;
+    justify-content: space-between;
     @include adapt(gap, 20, 10, 1);
     min-height: em(50);
   }
   &__menu {
-    flex: 1 1 25%;
+    flex: 0 1 25%;
   }
   &__logo {
     margin: 0 em(10);
@@ -21,6 +34,13 @@
     @media (max-width: $md4) {
       flex: 1 1 em(100);
     }
+  }
+  &__icons {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: em(22);
+    max-width: em(164);
   }
 }
 .menu-top-header {
@@ -74,10 +94,7 @@
 }
 
 .top-header__search {
-  padding-right: em(16);
-  padding-left: em(16);
-  // @include adapt(padding-left, 150, 20, 1);
-  flex: 0 1 em(240);
+  flex: 0 1 em(64);
   @media (max-width: $md3) {
     flex: 1 1 auto;
   }
@@ -90,7 +107,7 @@
   background-color: rgba(7, 7, 7, 0.03);
   border-radius: 3px;
   position: relative;
-  border: 1px solid palevioletred;
+  // border: 1px solid palevioletred;
   @media (min-width: $md2) {
     max-width: em(320);
   }
@@ -115,13 +132,10 @@
 /* ============================ */
 
 .cart-header {
-  display: flex;
-  align-items: center;
-  column-gap: em(15);
   position: relative;
   z-index: 5;
   &__icon {
-    flex: 0 0 em(32);
+    position: relative;
   }
   &__num {
     background-color: #fff;
@@ -136,6 +150,9 @@
     display: flex;
     align-items: center;
     justify-content: center;
+    @media (max-width: $md3) {
+      right: 0;
+    }
   }
 }
 
