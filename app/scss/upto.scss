@@ -1,26 +1,28 @@
 .toTop {
-    position: fixed;
-    bottom: 12%;
-    right: 2%;
-    display: none;
-    cursor: pointer;
-    height: 50px;
-    width: 50px;
-    background-color: $btnBgColour;
-    border-radius: 50%;
-    text-decoration: none;
-    z-index: 10;
-    // &:hover {
-    //     background-color: red;
-    // }
+  position: fixed;
+  bottom: 12%;
+  right: 2%;
+  display: none;
+  cursor: pointer;
+  height: em(50);
+  width: em(50);
+  color: #fff;
+  background-color: $btnBgColour;
+  border-radius: 50%;
+  text-decoration: none;
+  z-index: 10;
+  // font-size: 0;
+  // &:hover {
+  //     background-color: red;
+  // }
 }
 
 .show {
-    display: flex;
-    align-items: center;
-    justify-content: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .hide {
-    display: none;
+  display: none;
 }
