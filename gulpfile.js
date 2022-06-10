@@ -91,11 +91,6 @@ function css() {
 
 function js() {
   return src(path.src.js)
-    .pipe(
-      fileinclude({
-        prefix: '@@',
-      })
-    )
     .pipe(uglifyes())
     .pipe(
       rename({
