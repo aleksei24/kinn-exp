@@ -45,7 +45,7 @@ let { src, dest } = require('gulp'),
   ttf2woff2 = require('gulp-ttf2woff2'),
   fonter = require('gulp-fonter');
 
-function browserSync(par) {
+function browserSync() {
   browser.init({
     server: {
       baseDir: './' + projectFolder + '/',
@@ -127,11 +127,11 @@ gulp.task('otf2ttf', function () {
     .pipe(dest(sourceFolder + '/fonts/'));
 });
 
-function fontsStyle(params) {
+function fontsStyle() {
   let file_content = fs.readFileSync(sourceFolder + '/scss/fonts.scss');
   if (file_content == '') {
     fs.writeFile(sourceFolder + '/scss/fonts.scss', '', cb);
-    return fs.readdir(path.build.fonts, function (err, items) {
+    return fs.readdir(path.build.fonts, function (items) {
       if (items) {
         let c_fontname;
         for (var i = 0; i < items.length; i++) {
@@ -153,14 +153,14 @@ function fontsStyle(params) {
 
 function cb() {} // callback
 
-function watchFiles(params) {
+function watchFiles() {
   gulp.watch([path.watch.html], html);
   gulp.watch([path.watch.css], css);
   gulp.watch([path.watch.js], js);
   gulp.watch([path.watch.img], images);
 }
 
-function clean(params) {
+function clean() {
   return del(path.clean);
 }
 
