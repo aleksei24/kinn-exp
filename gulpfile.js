@@ -130,7 +130,7 @@ gulp.task('otf2ttf', function () {
 function fontsStyle() {
   let file_content = fs.readFileSync(sourceFolder + '/scss/fonts.scss');
   if (file_content == '') {
-    fs.writeFile(sourceFolder + '/scss/fonts.scss', '', cb());
+    fs.writeFile(sourceFolder + '/scss/fonts.scss', '', cb);
     return fs.readdir(path.build.fonts, function (items) {
       if (items) {
         let c_fontname;
@@ -141,7 +141,7 @@ function fontsStyle() {
             fs.appendFile(
               sourceFolder + '/scss/fonts.scss',
               '@include font("' + fontname + '", "' + fontname + '", "400", "normal");\r\n',
-              cb()
+              cb
             );
           }
           c_fontname = fontname;
@@ -164,7 +164,7 @@ function clean() {
   return del(path.clean);
 }
 
-let build = gulp.series(clean, gulp.parallel(js, css, html, images, fonts), fontsStyle);
+let build = gulp.series(clean, gulp.parallel(js, css, html, images, fonts));
 let watch = gulp.parallel(build, watchFiles, browserSync);
 
 // exports.script = script;
