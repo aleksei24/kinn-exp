@@ -17,7 +17,7 @@
   },
   "homepage": "https://github.com/aleksei24/gulp_4#readme",
   "devDependencies": {
-    "browser-sync": "^3.0.2",
+    "browser-sync": "^3.0.3",
     "del": "^6.1.1",
     "gulp": "^5.0.0",
     "gulp-autoprefixer": "^8.0.0",
